@@ -26,7 +26,7 @@ body {
   grid-row: 1/3;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  gap: 20px;
+  gap: 30px;
 }
 
 .sidebar ul {
@@ -36,7 +36,9 @@ body {
 .sidebar a {
   color: white;
   text-decoration: none;
-  display: block;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
   padding: 10px 0;
   font-weight: bold;
 }
@@ -78,6 +80,7 @@ header button {
 .notifications {
   justify-self: end;
   padding-right: 10px;
+  gap: 20px;
 }
 
 .notifications p {
@@ -119,7 +122,7 @@ header button {
 
 .main-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto;
   gap: 20px;
   padding: 20px;
@@ -129,6 +132,7 @@ header button {
   grid-row: 1/3;
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -137,17 +141,53 @@ header button {
 }
 
 svg {
-  width: 15px;
+  width: 17px;
   height: auto;
   cursor: pointer;
 }
 
 .card {
-  background-color: white;
-  padding: 20px;
+  padding: 20px 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  background: linear-gradient(to right, rgb(123, 6, 107) 2%, transparent 2%);
+  background-color: white;
+}
+
+.announcements {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
   display: grid;
   grid-template-rows: auto auto auto;
-  gap: 10px;
+  gap: 15px;
+}
+
+.trending {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 15px;
+}
+
+.trending > div {
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.trending p {
+  font-size: 14px;
+  color: #605f5f;
+}
+
+.trending img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
 }
