@@ -42,8 +42,15 @@ body {
   display: grid;
   grid-template-columns: 30px auto;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #285481;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 header {
@@ -72,6 +79,11 @@ header button {
   padding: 8px 30px;
   font-size: 12px;
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+header button:hover {
+  background-color: #285481;
 }
 
 .search > input {
@@ -150,17 +162,37 @@ h3 {
 }
 
 svg {
-  width: 17px;
+  width: 18px;
   height: auto;
   cursor: pointer;
+  transition: fill 150ms ease;
+  pointer-events: all;
+}
+
+svg.hover-fill:hover path,
+svg.hover-fill:hover circle,
+svg.hover-fill:hover rect,
+svg.hover-fill:hover polygon {
+  fill: #7b066b;
 }
 
 .card {
   padding: 20px 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background: linear-gradient(to right, rgb(123, 6, 107) 2%, transparent 2%);
+  background: linear-gradient(to right, #7b066b 2%, transparent 2%);
   background-color: white;
+}
+
+.card-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.card-btns svg {
+  width: 22px;
+  height: auto;
 }
 
 .announcements {
